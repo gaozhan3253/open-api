@@ -1,0 +1,25 @@
+{
+    "name": "eccang/open-api",
+    "description": "eccang erp open api",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "eccang"
+    ],
+    "homepage": "https://open.eccang.com/",
+    "support": {
+        "docs": "https://open.eccang.com/",
+        "issues": "",
+        "pull-request": "",
+        "source": ""
+    },
+    "require": {
+        "php": ">=7.2",
+        "psr/container": "^1.0|^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Eccang\\OpenApi\\": "src/"
+        }
+    }
+}

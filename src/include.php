@@ -8,7 +8,7 @@
 
 spl_autoload_register(function ($classname) {
     $path = str_replace('\\', DIRECTORY_SEPARATOR, $classname);
-    $path = str_replace('Eccang\OpenApi\\', '', $path);
+    $path = str_replace('Eccang' . DIRECTORY_SEPARATOR . 'OpenApi' . DIRECTORY_SEPARATOR, '', $path);
     $file = __DIR__ . DIRECTORY_SEPARATOR . $path . '.php';
 
     if (file_exists($file)) {

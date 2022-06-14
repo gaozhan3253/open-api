@@ -116,6 +116,10 @@ class Response
                 $this->setCode($this->getBody()['biz_content'][0]['error_code']);
                 $this->setMessage($this->getBody()['biz_content'][0]['error_msg']);
             }
+            if (isset($this->getBody()['biz_content'][0]['errorCode']) && $this->getBody()['biz_content'][0]['errorCode'] != '') {
+                $this->setCode($this->getBody()['biz_content'][0]['errorCode']);
+                $this->setMessage($this->getBody()['biz_content'][0]['errorMsg']);
+            }
             $message = '【' . $this->getCode() . '】' . $this->getMessage();
             throw new ValidateResponseException($message);
         }
